@@ -20,30 +20,30 @@ interface Player {
 const players: Player[] = [
   {
     name: "Kwame Asante",
-    team: "Legon Hall",
+    team: "Vipers",
     ppg: 24.3,
     rpg: 8.1,
     apg: 5.2,
     highlights: [
-      { title: "40-Point Game vs Akuafo", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
-      { title: "Buzzer Beater vs Commonwealth", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
+      { title: "40-Point Game vs Eagles", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
+      { title: "Buzzer Beater vs Reapers", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
       { title: "Season Opener Triple-Double", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
     ],
   },
   {
     name: "Yaw Mensah",
-    team: "Akuafo Hall",
+    team: "Eagles",
     ppg: 22.1,
     rpg: 6.4,
     apg: 3.8,
     highlights: [
-      { title: "Crossover & Dunk vs Volta", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
+      { title: "Crossover & Dunk vs Bulldogs", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
       { title: "35 Points in Semi-Final", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
     ],
   },
   {
     name: "Kofi Adjei",
-    team: "Commonwealth Hall",
+    team: "Reapers",
     ppg: 19.8,
     rpg: 9.2,
     apg: 2.1,
@@ -54,7 +54,7 @@ const players: Player[] = [
   },
   {
     name: "Nana Osei",
-    team: "Mensah Sarbah Hall",
+    team: "Knight Sharks",
     ppg: 18.5,
     rpg: 4.3,
     apg: 7.6,
