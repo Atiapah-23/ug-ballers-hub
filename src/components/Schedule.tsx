@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Calendar, Clock } from "lucide-react";
 
 const games = [
-  { home: "Legon Hall", away: "Akuafo Hall", date: "Mar 12, 2026", time: "4:00 PM", venue: "UG Sports Complex", status: "upcoming" },
-  { home: "Commonwealth Hall", away: "Volta Hall", date: "Mar 14, 2026", time: "6:00 PM", venue: "UG Sports Complex", status: "upcoming" },
-  { home: "Mensah Sarbah Hall", away: "Hilla Limann Hall", date: "Mar 16, 2026", time: "4:00 PM", venue: "UG Sports Complex", status: "upcoming" },
-  { home: "Legon Hall", away: "Commonwealth Hall", homeScore: 72, awayScore: 65, date: "Mar 7, 2026", status: "final" },
-  { home: "Akuafo Hall", away: "Mensah Sarbah Hall", homeScore: 58, awayScore: 61, date: "Mar 5, 2026", status: "final" },
+  { home: "Vipers", away: "Eagles", date: "Mar 12, 2026", time: "4:00 PM", venue: "UG Sports Complex", status: "upcoming" },
+  { home: "Reapers", away: "Bulldogs", date: "Mar 14, 2026", time: "6:00 PM", venue: "UG Sports Complex", status: "upcoming" },
+  { home: "Knight Sharks", away: "Wolves", date: "Mar 16, 2026", time: "4:00 PM", venue: "UG Sports Complex", status: "upcoming" },
+  { home: "Vipers", away: "Reapers", homeScore: 72, awayScore: 65, date: "Mar 7, 2026", status: "final" },
+  { home: "Eagles", away: "Knight Sharks", homeScore: 58, awayScore: 61, date: "Mar 5, 2026", status: "final" },
 ];
 
 const Schedule = () => {

@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
 const teams = [
-  { name: "Legon Hall", w: 8, l: 1, pts: 17, streak: "W5" },
-  { name: "Akuafo Hall", w: 7, l: 2, pts: 16, streak: "W3" },
-  { name: "Commonwealth Hall", w: 6, l: 3, pts: 15, streak: "L1" },
-  { name: "Mensah Sarbah Hall", w: 5, l: 4, pts: 14, streak: "W2" },
-  { name: "Volta Hall", w: 4, l: 5, pts: 13, streak: "L2" },
-  { name: "Jean Nelson Aka Hall", w: 3, l: 6, pts: 12, streak: "W1" },
-  { name: "Hilla Limann Hall", w: 2, l: 7, pts: 11, streak: "L3" },
-  { name: "Elizabeth Frances Sey Hall", w: 1, l: 8, pts: 10, streak: "L4" },
+  { name: "Vipers", w: 8, l: 1, pts: 17, streak: "W5" },
+  { name: "Eagles", w: 7, l: 2, pts: 16, streak: "W3" },
+  { name: "Reapers", w: 6, l: 3, pts: 15, streak: "L1" },
+  { name: "Knight Sharks", w: 5, l: 4, pts: 14, streak: "W2" },
+  { name: "Bulldogs", w: 4, l: 5, pts: 13, streak: "L2" },
+  { name: "Kings", w: 3, l: 6, pts: 12, streak: "W1" },
+  { name: "Wolves", w: 2, l: 7, pts: 11, streak: "L3" },
+  { name: "Panthers", w: 1, l: 8, pts: 10, streak: "L4" },
 ];
 
 const Standings = () => {
