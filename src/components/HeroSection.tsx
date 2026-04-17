@@ -30,7 +30,7 @@ const HeroSection = () => {
             <span className="text-foreground">LEAGUE</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-8">
-            The premier inter-hall basketball competition at Legon
+            Legon basketball league
           </p>
           <div className="flex gap-4 justify-center">
             <span className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold tracking-wide text-sm uppercase cursor-pointer hover:opacity-90 transition-opacity">
