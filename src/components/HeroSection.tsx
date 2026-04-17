@@ -1,58 +1,68 @@
 import { motion } from "framer-motion";
+import { Play, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-basketball.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[78vh] flex items-end overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Basketball action"
-          className="w-full h-full object-cover opacity-30"
+          alt="University of Ghana basketball action"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/40" />
       </div>
 
+      {/* Side red stripe */}
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary z-10" />
+
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container mx-auto px-6 pb-16 pt-28">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="max-w-3xl"
         >
-          <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-            UNIVERSITY OF GHANA
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-6">
-            <span className="text-gradient-gold">BASKETBALL</span>
-            <br />
-            <span className="text-foreground">LEAGUE</span>
-          </h1>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto mb-8">
-            Legon basketball league
-          </p>
-          <div className="flex gap-4 justify-center">
-            <span className="bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold tracking-wide text-sm uppercase cursor-pointer hover:opacity-90 transition-opacity">
-              View Schedule
+          <div className="inline-flex items-center gap-2 mb-5">
+            <span className="bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-[0.2em] px-2.5 py-1 rounded-sm">
+              Featured
             </span>
-            <span className="border border-primary text-primary px-6 py-3 rounded-md font-semibold tracking-wide text-sm uppercase cursor-pointer hover:bg-primary/10 transition-colors">
-              Standings
+            <span className="text-foreground/70 text-xs font-semibold uppercase tracking-widest">
+              2025/26 Season • Round 7
             </span>
           </div>
-        </motion.div>
 
-        {/* Season Badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-12 inline-flex items-center gap-2 bg-muted/50 border border-border rounded-full px-5 py-2"
-        >
-          <span className="w-2 h-2 rounded-full bg-win animate-pulse-gold" />
-          <span className="text-sm text-muted-foreground">
-            2025/26 Season — Now Live
-          </span>
+          <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-extrabold leading-[0.9] mb-5">
+            <span className="block text-foreground">VIPERS STRIKE</span>
+            <span className="block text-gradient-rwb">EAGLES, 72-65</span>
+          </h1>
+
+          <p className="text-foreground/80 text-base md:text-lg max-w-2xl mb-8 leading-relaxed">
+            Kwame Asante drops a season-high 28 as the Vipers extend their win
+            streak to five at the UG Sports Complex. Catch every dunk, dime, and
+            dagger from Legon's top hoops league.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="#highlights"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded text-xs font-bold uppercase tracking-widest hover:opacity-90 transition-opacity"
+            >
+              <Play className="w-4 h-4 fill-current" />
+              Watch Highlights
+            </a>
+            <a
+              href="#schedule"
+              className="inline-flex items-center gap-2 bg-foreground/10 hover:bg-foreground/20 text-foreground border border-border px-6 py-3 rounded text-xs font-bold uppercase tracking-widest transition-colors backdrop-blur-sm"
+            >
+              Full Schedule
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

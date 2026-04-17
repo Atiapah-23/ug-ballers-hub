@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Trophy, Play, X, Film } from "lucide-react";
+import { Play, X, Film } from "lucide-react";
 
 interface Highlight {
   title: string;
@@ -70,72 +70,79 @@ const TopPlayers = () => {
 
   return (
     <>
-      <section className="py-16 px-6">
-        <div className="container mx-auto max-w-4xl">
+      <section id="highlights" className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-2">
-              <Trophy className="w-6 h-6 text-primary" />
-              <h2 className="text-3xl md:text-4xl font-bold text-gradient-gold">
-                Top Players
-              </h2>
+            <div className="flex items-end justify-between mb-8 border-l-4 border-primary pl-4">
+              <div>
+                <p className="text-primary text-xs font-bold uppercase tracking-[0.25em] mb-1">
+                  Stars
+                </p>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-foreground">
+                  Top Players
+                </h2>
+              </div>
+              <span className="hidden sm:inline text-xs text-muted-foreground uppercase tracking-widest">
+                Tap a card for highlight reels
+              </span>
             </div>
-            <p className="text-muted-foreground mb-8">Season leaders</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {players.map((player, i) => (
-                <motion.div
+                <motion.button
+                  type="button"
+                  onClick={() => setSelectedPlayer(player)}
                   key={player.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className={`bg-card border border-border rounded-lg p-6 relative overflow-hidden ${
+                  transition={{ delay: i * 0.08 }}
+                  className={`group bg-card border border-border rounded overflow-hidden text-left hover:border-primary/60 transition-colors relative ${
                     i === 0 ? "glow-gold" : ""
                   }`}
                 >
                   {i === 0 && (
-                    <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-lg">
+                    <div className="absolute top-0 left-0 bg-primary text-primary-foreground text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-br z-10">
                       MVP
                     </div>
                   )}
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center text-primary font-bold text-lg">
+                  <div className="aspect-[4/3] bg-gradient-court relative flex items-end justify-center overflow-hidden">
+                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.6),transparent_60%)]" />
+                    <span className="relative font-extrabold text-7xl text-white/90 leading-none mb-2">
                       {player.name.charAt(0)}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-foreground text-lg font-sans">
-                        {player.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">{player.team}</p>
-                      <div className="flex gap-5 mt-3">
-                        <div>
-                          <p className="text-primary font-bold text-lg font-mono">{player.ppg}</p>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">PPG</p>
-                        </div>
-                        <div>
-                          <p className="text-foreground font-bold text-lg font-mono">{player.rpg}</p>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">RPG</p>
-                        </div>
-                        <div>
-                          <p className="text-foreground font-bold text-lg font-mono">{player.apg}</p>
-                          <p className="text-[10px] uppercase tracking-wider text-muted-foreground">APG</p>
-                        </div>
+                    </span>
+                    <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-widest text-white/70">
+                      {player.team}
+                    </span>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-extrabold text-foreground text-base leading-tight">
+                      {player.name}
+                    </h3>
+                    <div className="grid grid-cols-3 gap-2 mt-3 pt-3 border-t border-border">
+                      <div>
+                        <p className="text-foreground font-mono font-extrabold">{player.ppg}</p>
+                        <p className="text-[9px] uppercase tracking-widest text-muted-foreground">PPG</p>
                       </div>
-                      {/* Highlights Button */}
-                      <button
-                        onClick={() => setSelectedPlayer(player)}
-                        className="mt-4 inline-flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-md text-xs font-semibold uppercase tracking-wider transition-colors"
-                      >
-                        <Film className="w-3.5 h-3.5" />
-                        Highlights ({player.highlights.length})
-                      </button>
+                      <div>
+                        <p className="text-foreground font-mono font-extrabold">{player.rpg}</p>
+                        <p className="text-[9px] uppercase tracking-widest text-muted-foreground">RPG</p>
+                      </div>
+                      <div>
+                        <p className="text-foreground font-mono font-extrabold">{player.apg}</p>
+                        <p className="text-[9px] uppercase tracking-widest text-muted-foreground">APG</p>
+                      </div>
+                    </div>
+                    <div className="mt-3 inline-flex items-center gap-1.5 text-primary text-[11px] font-bold uppercase tracking-widest group-hover:gap-2 transition-all">
+                      <Film className="w-3 h-3" />
+                      {player.highlights.length} Reels
                     </div>
                   </div>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           </motion.div>

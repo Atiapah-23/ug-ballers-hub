@@ -49,6 +49,9 @@ export default {
         },
         win: "hsl(var(--win))",
         loss: "hsl(var(--loss))",
+        live: "hsl(var(--live))",
+        "nba-red": "hsl(var(--nba-red))",
+        "nba-blue": "hsl(var(--nba-blue))",
         "gold-glow": "hsl(var(--gold-glow))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
