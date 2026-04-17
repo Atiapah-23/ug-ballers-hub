@@ -29,6 +29,7 @@ const players: Player[] = [
     ppg: 24.3,
     rpg: 8.1,
     apg: 5.2,
+    photo: playerImg1,
     highlights: [
       { title: "40-Point Game vs Eagles", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
       { title: "Buzzer Beater vs Reapers", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
@@ -41,6 +42,7 @@ const players: Player[] = [
     ppg: 22.1,
     rpg: 6.4,
     apg: 3.8,
+    photo: playerImg2,
     highlights: [
       { title: "Crossover & Dunk vs Bulldogs", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
       { title: "35 Points in Semi-Final", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
@@ -52,6 +54,7 @@ const players: Player[] = [
     ppg: 19.8,
     rpg: 9.2,
     apg: 2.1,
+    photo: playerImg3,
     highlights: [
       { title: "20-Rebound Monster Game", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
       { title: "Back-to-Back Blocks", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
@@ -63,6 +66,7 @@ const players: Player[] = [
     ppg: 18.5,
     rpg: 4.3,
     apg: 7.6,
+    photo: playerImg4,
     highlights: [
       { title: "12 Assists Masterclass", url: "https://www.youtube.com/embed/dQw4w9WgXcQ", thumbnail: "" },
     ],
