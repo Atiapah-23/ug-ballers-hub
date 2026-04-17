@@ -17,6 +17,7 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
           <a href="#standings" className="text-muted-foreground hover:text-primary transition-colors">Standings</a>
+          <a href="#highlights" className="text-muted-foreground hover:text-primary transition-colors">Highlights</a>
           <a href="#schedule" className="text-muted-foreground hover:text-primary transition-colors">Schedule</a>
           <a href="#players" className="text-muted-foreground hover:text-primary transition-colors">Players</a>
         </div>
@@ -34,6 +35,7 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-background border-b border-border px-6 py-4 space-y-3">
           <a href="#standings" onClick={() => setOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary">Standings</a>
+          <a href="#highlights" onClick={() => setOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary">Highlights</a>
           <a href="#schedule" onClick={() => setOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary">Schedule</a>
           <a href="#players" onClick={() => setOpen(false)} className="block text-sm font-semibold uppercase tracking-wider text-muted-foreground hover:text-primary">Players</a>
         </div>
