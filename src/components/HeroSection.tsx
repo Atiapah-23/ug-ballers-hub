@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-basketball.jpg";
+import actionImg from "@/assets/player-action-1.jpg";
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary z-10" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pb-16 pt-28">
+      <div className="relative z-10 container mx-auto px-6 pb-16 pt-28 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,6 +63,26 @@ const HeroSection = () => {
               Full Schedule
               <ArrowRight className="w-4 h-4" />
             </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="hidden lg:block relative aspect-[4/5] max-w-sm ml-auto"
+        >
+          <div className="absolute -inset-2 bg-gradient-court rounded opacity-40 blur-xl" />
+          <img
+            src={actionImg}
+            alt="UG Hoops player throwing down a dunk"
+            width={1024}
+            height={768}
+            className="relative w-full h-full object-cover rounded shadow-2xl border border-primary/30"
+          />
+          <div className="absolute -bottom-3 -left-3 bg-primary text-primary-foreground px-3 py-2 rounded shadow-lg">
+            <p className="text-[9px] font-bold uppercase tracking-widest leading-none opacity-80">Play of the night</p>
+            <p className="text-sm font-extrabold leading-tight">Asante throws it down</p>
           </div>
         </motion.div>
       </div>
