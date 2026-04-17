@@ -65,6 +65,26 @@ const HeroSection = () => {
             </a>
           </div>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="hidden lg:block relative aspect-[4/5] max-w-sm ml-auto"
+        >
+          <div className="absolute -inset-2 bg-gradient-court rounded opacity-40 blur-xl" />
+          <img
+            src={actionImg}
+            alt="UG Hoops player throwing down a dunk"
+            width={1024}
+            height={768}
+            className="relative w-full h-full object-cover rounded shadow-2xl border border-primary/30"
+          />
+          <div className="absolute -bottom-3 -left-3 bg-primary text-primary-foreground px-3 py-2 rounded shadow-lg">
+            <p className="text-[9px] font-bold uppercase tracking-widest leading-none opacity-80">Play of the night</p>
+            <p className="text-sm font-extrabold leading-tight">Asante throws it down</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
