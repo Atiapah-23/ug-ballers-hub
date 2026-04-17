@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Play, X, Film } from "lucide-react";
+import playerImg1 from "@/assets/player-portrait-1.jpg";
+import playerImg2 from "@/assets/player-portrait-2.jpg";
+import playerImg3 from "@/assets/player-portrait-3.jpg";
+import playerImg4 from "@/assets/player-portrait-4.jpg";
 
 interface Highlight {
   title: string;
@@ -14,6 +18,7 @@ interface Player {
   ppg: number;
   rpg: number;
   apg: number;
+  photo: string;
   highlights: Highlight[];
 }
 
