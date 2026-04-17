@@ -119,12 +119,17 @@ const TopPlayers = () => {
                       MVP
                     </div>
                   )}
-                  <div className="aspect-[4/3] bg-gradient-court relative flex items-end justify-center overflow-hidden">
-                    <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.6),transparent_60%)]" />
-                    <span className="relative font-extrabold text-7xl text-white/90 leading-none mb-2">
-                      {player.name.charAt(0)}
-                    </span>
-                    <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-widest text-white/70">
+                  <div className="aspect-[4/5] relative overflow-hidden bg-muted">
+                    <img
+                      src={player.photo}
+                      alt={`${player.name}, ${player.team}`}
+                      width={768}
+                      height={1024}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                    <span className="absolute bottom-2 right-3 text-[10px] font-bold uppercase tracking-widest text-primary bg-background/70 px-2 py-0.5 rounded">
                       {player.team}
                     </span>
                   </div>
@@ -172,10 +177,19 @@ const TopPlayers = () => {
             className="relative bg-card border border-border rounded-xl w-full max-w-2xl max-h-[85vh] overflow-y-auto"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-border">
-              <div>
-                <h3 className="text-xl font-bold text-foreground font-sans">{selectedPlayer.name}</h3>
-                <p className="text-sm text-muted-foreground">{selectedPlayer.team} • Highlight Reels</p>
+            <div className="flex items-center justify-between p-6 border-b border-border gap-4">
+              <div className="flex items-center gap-4 min-w-0">
+                <img
+                  src={selectedPlayer.photo}
+                  alt={selectedPlayer.name}
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 rounded-full object-cover object-top border-2 border-primary flex-shrink-0"
+                />
+                <div className="min-w-0">
+                  <h3 className="text-xl font-bold text-foreground font-sans truncate">{selectedPlayer.name}</h3>
+                  <p className="text-sm text-muted-foreground">{selectedPlayer.team} • Highlight Reels</p>
+                </div>
               </div>
               <button
                 onClick={() => { setSelectedPlayer(null); setActiveVideo(null); }}
