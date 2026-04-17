@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Trophy, Play, X, Film } from "lucide-react";
+import { Play, X, Film } from "lucide-react";
 
 interface Highlight {
   title: string;
