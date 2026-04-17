@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-basketball.jpg";
+import actionImg from "@/assets/player-action-1.jpg";
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
       <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary z-10" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 pb-16 pt-28">
+      <div className="relative z-10 container mx-auto px-6 pb-16 pt-28 grid lg:grid-cols-[1.4fr_1fr] gap-10 items-end">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
